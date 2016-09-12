@@ -1,0 +1,6 @@
+simulate_simple_experiment(10)
+simulate_observational_study(10)
+D1 <- simulate_observational_study(100)
+D2 <- simulate_simple_experiment(100)
+calculate_naive_difference_in_means(D1)
+calculate_naive_difference_in_means(D2)

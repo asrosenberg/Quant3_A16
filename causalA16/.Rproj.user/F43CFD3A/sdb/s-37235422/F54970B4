@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "library(causalA16)\nlibrary(data.table)\nlibrary(ggplot2)\nlibrary(texreg)\n\ndat <- load_dataset(\"fearon_laitin_03\")\nsetDT(dat)\nsetkey(dat, onset)\n\nggplot(dat, aes(onset)) + geom_histogram() + theme_bw()\nrange(dat$onset)\ntable(dat$onset)\ndat <- dat[onset < 4]\n\nmod1 <- glm(onset ~ warl + gdpenl + lpopl1 + lmtnest + ncontig + Oil + nwstate +\n  instab + polity2l + ethfrac + relfrac, family = binomial(link = \"logit\"),\n  data = dat)\nscreenreg(mod1)\ndim(model.matrix(mod1))\n",
+    "created" : 1473691356604.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3190599927",
+    "id" : "F54970B4",
+    "lastKnownWriteTime" : 1473692917,
+    "last_content_update" : 1473692917915,
+    "path" : "~/Dropbox/Archive/Teaching/Quant3_AU16_not_shared/causalA16/dev/eda.R",
+    "project_path" : "dev/eda.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 5,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "# ' Load dataset from inst/extdata\n#'\n#' Loads a dataset from inst/extdata into memory.\n#' @param dataset the name of the dataset to load\n#' @return data set\n#' @import data.table\n#' @export\nload_dataset <- function(dataset)\n{\n  fn <- system.file(\"extdata\", paste0(dataset,\".csv\"), package = \"causalA16\")\n  DATA <- read.csv(fn)\n}\n\n",
+    "created" : 1473689595767.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3957073476",
+    "id" : "1D5B3CE4",
+    "lastKnownWriteTime" : 1473690556,
+    "last_content_update" : 1473690556358,
+    "path" : "~/Dropbox/Archive/Teaching/Quant3_AU16_not_shared/causalA16/R/load_data.R",
+    "project_path" : "R/load_data.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 6,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

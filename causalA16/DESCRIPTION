@@ -1,0 +1,11 @@
+Package: causalA16
+Type: Package
+Title: Tools for Causal Inference (Quant 3, 2016)
+Version: 0.1.0
+Author: Who wrote it
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+LazyData: true
+RoxygenNote: 5.0.1
+depends: R(>= 3.1), data.table, ggplot2
