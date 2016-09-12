@@ -16,4 +16,5 @@ mod1 <- glm(onset ~ warl + gdpenl + lpopl1 + lmtnest + ncontig + Oil + nwstate +
   instab + polity2l + ethfrac + relfrac, family = binomial(link = "logit"),
   data = dat)
 screenreg(mod1)
+texreg(mod1)
 dim(model.matrix(mod1))
