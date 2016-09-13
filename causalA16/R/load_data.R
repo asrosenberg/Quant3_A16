@@ -7,7 +7,8 @@
 #' @export
 load_dataset <- function(dataset)
 {
-  fn <- system.file("extdata", paste0(dataset,".csv"), package = "causalA16")
-  DATA <- read.csv(fn)
+  file_name <- system.file("extdata", paste0(dataset,".csv"),
+    package = "causalA16")
+  DATA <- read.csv(file_name)
 }
 
