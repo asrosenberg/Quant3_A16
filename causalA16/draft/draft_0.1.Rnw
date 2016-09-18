@@ -1,0 +1,79 @@
+\documentclass[12pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{scrextend}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage[top = 1in, left = 1in, right = 1in, bottom = 1in]{geometry}
+\usepackage{setspace}
+\usepackage[bookmarks = true, hidelinks]{hyperref}
+%\usepackage{breakurl}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{dcolumn}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{natbib}
+\usepackage[compact]{titlesec}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{baskervald}
+
+\makeatletter
+
+\makeatother
+
+\pagestyle{plain}
+
+\begin{document}
+<<setup, include=FALSE, cache=FALSE, echo=FALSE>>=
+# in Rstudio set Tools > Project Options > Sweave > "Weave files using" to knitr
+library(causalA16)
+library(data.table)
+library(ggplot2)
+library(texreg)
+
+dat <- load_dataset("fearon_laitin_03")
+setDT(dat)
+setkey(dat, onset)
+#ggplot(dat, aes(onset)) + geom_histogram() + theme_bw()
+#range(dat$onset)
+#table(dat$onset)
+dat <- dat[onset < 4]
+
+@
+
+\title{Gulliver Unbound?}
+
+\author{Andrew S. Rosenberg\thanks{Ohio State University}}
+
+\maketitle
+
+\begin{abstract} \noindent
+What a AMAZING abstract!
+\end{abstract}
+
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\doublespacing
+
+\section*{Introduction}
+I'm going to show the world how WRONG Fearon and Laitin are! Science!
+
+\section*{Replication Study}
+In this section, I will show that I can replicate the findings.
+<<echo=FALSE>>=
+mod1 <- glm(onset ~ warl + gdpenl + lpopl1 + lmtnest + ncontig + Oil + nwstate +
+  instab + polity2l + ethfrac + relfrac, family = binomial(link = "logit"),
+  data = dat)
+tab1 <- texreg(mod1, digits = 3, caption = "Replication of Model 1 of Fearon and Laitin (2003).", include.deviance = FALSE, include.bic = FALSE)
+@
+\Sexpr{tab1}
+
+
+\end{document}

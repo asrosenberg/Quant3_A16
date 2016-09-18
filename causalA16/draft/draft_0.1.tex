@@ -1,0 +1,150 @@
+\documentclass[12pt]{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[T1]{fontenc}
+\usepackage{scrextend}
+\usepackage{amsfonts, amsmath, amsthm, amssymb}
+\usepackage[top = 1in, left = 1in, right = 1in, bottom = 1in]{geometry}
+\usepackage{setspace}
+\usepackage[bookmarks = true, hidelinks]{hyperref}
+%\usepackage{breakurl}
+\usepackage{bookmark}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage{longtable}
+\usepackage{rotating}
+\usepackage{array}
+\usepackage{dcolumn}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{siunitx}
+\usepackage{natbib}
+\usepackage[compact]{titlesec}
+\usepackage{listings}
+\usepackage{color}
+\usepackage{baskervald}
+
+\makeatletter
+
+\makeatother
+
+\pagestyle{plain}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+\title{Gulliver Unbound?}
+
+\author{Andrew S. Rosenberg\thanks{Ohio State University}}
+
+\maketitle
+
+\begin{abstract} \noindent
+What a AMAZING abstract!
+\end{abstract}
+
+\thispagestyle{empty}
+
+\newpage
+\setcounter{page}{1}
+\doublespacing
+
+\section*{Introduction}
+I'm going to show the world how WRONG Fearon and Laitin are! Science!
+
+\section*{Replication Study}
+In this section, I will show that I can replicate the findings.
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l c }
+\hline
+ & Model 1 \\
+\hline
+(Intercept)    & $-6.666^{***}$ \\
+               & $(0.739)$      \\
+warl           & $-0.924^{**}$  \\
+               & $(0.314)$      \\
+gdpenl         & $-0.347^{***}$ \\
+               & $(0.072)$      \\
+lpopl1         & $0.257^{***}$  \\
+               & $(0.073)$      \\
+lmtnest        & $0.221^{**}$   \\
+               & $(0.085)$      \\
+ncontig        & $0.392$        \\
+               & $(0.277)$      \\
+Oil            & $0.886^{**}$   \\
+               & $(0.279)$      \\
+nwstate        & $1.717^{***}$  \\
+               & $(0.339)$      \\
+instab         & $0.625^{**}$   \\
+               & $(0.236)$      \\
+polity2l       & $0.024$        \\
+               & $(0.017)$      \\
+ethfrac        & $0.144$        \\
+               & $(0.375)$      \\
+relfrac        & $0.285$        \\
+               & $(0.511)$      \\
+\hline
+AIC            & 978.436        \\
+Log Likelihood & -477.218       \\
+Num. obs.      & 6326           \\
+\hline
+\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
+\end{tabular}
+\caption{Replication of Model 1 of Fearon and Laitin (2003).}
+\label{table:coefficients}
+\end{center}
+\end{table}
+
+
+
+\end{document}
