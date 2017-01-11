@@ -39,7 +39,7 @@ library(texreg)
 dat <- load_dataset("fearon_laitin_03")
 setDT(dat)
 setkey(dat, onset)
-#ggplot(dat, aes(onset)) + geom_histogram() + theme_bw()
+ggplot(dat, aes(onset)) + geom_histogram() + theme_bw()
 #range(dat$onset)
 #table(dat$onset)
 dat <- dat[onset < 4]
@@ -71,9 +71,18 @@ In this section, I will show that I can replicate the findings.
 mod1 <- glm(onset ~ warl + gdpenl + lpopl1 + lmtnest + ncontig + Oil + nwstate +
   instab + polity2l + ethfrac + relfrac, family = binomial(link = "logit"),
   data = dat)
-tab1 <- texreg(mod1, digits = 3, caption = "Replication of Model 1 of Fearon and Laitin (2003).", include.deviance = FALSE, include.bic = FALSE)
+tab1 <- texreg(mod1, digits = 3,
+  caption = "Replication of Model 1 of Fearon and Laitin (2003).", 
+  include.deviance = FALSE, include.bic = FALSE)
+oil_coef <- signif(mod1$coef[7], digits = 3)
 @
+
 \Sexpr{tab1}
+
+Markdown/knitr is \emph{super} nice because it allows you to ensure that the 
+entire paper compiles properly---the results are the results. For example, 
+let's say I really must share with the reader that having oil leads to a 
+\Sexpr{oil_coef} increase in the log odds of going to war. This feature is pretty slick because 
 
 
 \end{document}

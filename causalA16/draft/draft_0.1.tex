@@ -21,6 +21,7 @@
 \newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
 \newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
 \newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
 
 \usepackage{framed}
 \makeatletter
@@ -101,55 +102,56 @@ I'm going to show the world how WRONG Fearon and Laitin are! Science!
 
 \section*{Replication Study}
 In this section, I will show that I can replicate the findings.
-\begin{knitrout}
-\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
-\begin{verbatim}
-## 
-## \begin{table}
-## \begin{center}
-## \begin{tabular}{l c }
-## \hline
-##  & Model 1 \\
-## \hline
-## (Intercept)    & $-6.666^{***}$ \\
-##                & $(0.739)$      \\
-## warl           & $-0.924^{**}$  \\
-##                & $(0.314)$      \\
-## gdpenl         & $-0.347^{***}$ \\
-##                & $(0.072)$      \\
-## lpopl1         & $0.257^{***}$  \\
-##                & $(0.073)$      \\
-## lmtnest        & $0.221^{**}$   \\
-##                & $(0.085)$      \\
-## ncontig        & $0.392$        \\
-##                & $(0.277)$      \\
-## Oil            & $0.886^{**}$   \\
-##                & $(0.279)$      \\
-## nwstate        & $1.717^{***}$  \\
-##                & $(0.339)$      \\
-## instab         & $0.625^{**}$   \\
-##                & $(0.236)$      \\
-## polity2l       & $0.024$        \\
-##                & $(0.017)$      \\
-## ethfrac        & $0.144$        \\
-##                & $(0.375)$      \\
-## relfrac        & $0.285$        \\
-##                & $(0.511)$      \\
-## \hline
-## AIC            & 978.436        \\
-## Log Likelihood & -477.218       \\
-## Num. obs.      & 6326           \\
-## \hline
-## \multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
-## \end{tabular}
-## \caption{Replication of Model 1 of Fearon and Laitin (2003).}
-## \label{table:coefficients}
-## \end{center}
-## \end{table}
-\end{verbatim}
-\end{kframe}
-\end{knitrout}
-%tab1
+
+
+
+\begin{table}
+\begin{center}
+\begin{tabular}{l c }
+\hline
+ & Model 1 \\
+\hline
+(Intercept)    & $-6.666^{***}$ \\
+               & $(0.739)$      \\
+warl           & $-0.924^{**}$  \\
+               & $(0.314)$      \\
+gdpenl         & $-0.347^{***}$ \\
+               & $(0.072)$      \\
+lpopl1         & $0.257^{***}$  \\
+               & $(0.073)$      \\
+lmtnest        & $0.221^{**}$   \\
+               & $(0.085)$      \\
+ncontig        & $0.392$        \\
+               & $(0.277)$      \\
+Oil            & $0.886^{**}$   \\
+               & $(0.279)$      \\
+nwstate        & $1.717^{***}$  \\
+               & $(0.339)$      \\
+instab         & $0.625^{**}$   \\
+               & $(0.236)$      \\
+polity2l       & $0.024$        \\
+               & $(0.017)$      \\
+ethfrac        & $0.144$        \\
+               & $(0.375)$      \\
+relfrac        & $0.285$        \\
+               & $(0.511)$      \\
+\hline
+AIC            & 978.436        \\
+Log Likelihood & -477.218       \\
+Num. obs.      & 6326           \\
+\hline
+\multicolumn{2}{l}{\scriptsize{$^{***}p<0.001$, $^{**}p<0.01$, $^*p<0.05$}}
+\end{tabular}
+\caption{Replication of Model 1 of Fearon and Laitin (2003).}
+\label{table:coefficients}
+\end{center}
+\end{table}
+
+
+Markdown/knitr is \emph{super} nice because it allows you to ensure that the 
+entire paper compiles properly---the results are the results. For example, 
+let's say I really must share with the reader that having oil leads to a 
+0.886 increase in the log odds of going to war. This feature is pretty slick because 
 
 
 \end{document}
